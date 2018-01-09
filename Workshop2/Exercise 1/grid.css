@@ -16,7 +16,7 @@ html {
   
   /* Grid system! */
   .row {
-      max-width: 1000px;
+      max-width: 100%;
       margin: 0 auto;
       display: flex; /* This will allow our row to display columns horizontally */
       flex-wrap: wrap; /* This will become necessary to allow our flex boxes to stack in responsive mode */
@@ -66,9 +66,21 @@ html {
   .col-small-1 {
       width: 8.333%;
   }
-  
+  .small-flex-column  {
+    flex-direction: column-reverse;
+    max-width: 100%;
+   }
   /* Medium and up screen sizes */
   @media only screen and (min-width: 641px) {
+    
+    .medium-reverse {
+        flex-direction: column-reverse;
+        max-width: 100%;
+    }
+    .medium-reverse p{
+        margin-right: auto;
+    }
+
     .col-medium-12 {
         width: 100%;
     }
@@ -115,6 +127,9 @@ html {
   
   /* Large screen sizes */
   @media only screen and (min-width: 1025px) {
+    .large-reverse {
+        flex-direction: row;
+    }
     .col-large-12 {
         width: 100%;
     }

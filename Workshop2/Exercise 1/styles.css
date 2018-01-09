@@ -63,7 +63,7 @@
 }
 .specs {
     text-align: center;
-    margin: 0 10em
+    margin: 0 10em;
 }
 
 .notify-section{
@@ -74,15 +74,9 @@
     align-content: center;  
 }
 
-.newsletter p {
-    margin-right: 50%;
-   
-}
+
 .newsletter{
     max-width: 50%;
-    margin: 0px auto;
-    margin-top: auto;
-    margin-bottom: auto;
 }
 .signup-container{
     margin-bottom: 40px;
@@ -132,7 +126,9 @@
    border-radius: 50%;
    width: 90px;
    height: 90px;
-   line-height: 90px;
+   display: flex;
+   align-content: center;
+   justify-content: center;
    color: white;
 }
 html {
