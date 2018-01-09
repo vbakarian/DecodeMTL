@@ -1,0 +1,122 @@
+.os {
+    color:white;
+    display: flex;
+}
+.os-icon{
+    margin: 0 0.3em; /* This sets the margin to 0 for top and bottom, and 0.3em for left and right.*/
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    opacity: 0.5;
+    border-radius: 50%;
+}
+
+.os-icon:hover{
+    background-color: green;
+    cursor: pointer;
+}
+
+.main-section{
+   background: url(http://placekitten.com/g/401/401);
+   background-size: cover;
+   height: 70vh;
+   max-height: 400px;
+}
+.specs img{
+    height: 75px;
+    border-radius: 50%;
+}
+
+.middle-section{
+    display: flex;
+    justify-content: center;
+}
+.specs h1{
+    justify-content: center;
+}
+.specs {
+    text-align: center;
+    margin: 0 10em
+}
+
+.notify-section{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    background-color: grey; 
+    align-content: center;  
+}
+
+.newsletter p {
+    margin-right: 50%;
+   
+}
+.newsletter{
+    max-width: 50%;
+    margin: 0px auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.signup-container{
+    margin-bottom: 40px;
+    display: flex;
+    height: 50px;
+}
+#video {
+    margin-right: 200px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-radius: 20px;
+}
+
+.thumbnail img {
+    border: 1px solid #999;
+    padding: 0.5em;
+    margin: 1em;
+}
+.slide{
+    text-align: center;
+}
+.social-icons{
+    display:flex;
+    justify-content: center;
+}
+.social-icon{
+    margin: 0 0.3em; 
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    opacity: 0.5;
+}
+.social-icon:hover{
+    background-color: green;
+    cursor: pointer;
+}
+
+.mid-icon{
+   font-size: 75px;
+   background-color: green;
+   border-radius: 50%;
+   width: 90px;
+   height: 90px;
+   justify-content: center;
+   display:flex;
+   text-align: center;
+   align-content: center;
+   margin: auto;
+}
+html {
+    box-sizing: border-box;
+  }
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+  
