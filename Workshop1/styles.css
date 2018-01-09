@@ -20,19 +20,43 @@
 }
 
 .main-section{
-   background: url(http://placekitten.com/g/401/401);
+   background: url(pexels-photo.jpg);
    background-size: cover;
-   height: 70vh;
-   max-height: 400px;
+   height: 100vh;
+   max-height: 550px;
+   margin-top: 0;
 }
 .specs img{
     height: 75px;
     border-radius: 50%;
 }
 
+.message{
+  padding-top: 150px;
+  padding-left: 300px;
+  
+}
+
+#email{
+  border-style: none;
+  border-radius: 5px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+#btn-notify{
+  width: 85px;
+  border-style: none;
+  border-radius: 5px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  background-color: green;
+}
+
 .middle-section{
     display: flex;
     justify-content: center;
+    margin-top: 35px;
 }
 .specs h1{
     justify-content: center;
@@ -102,16 +126,14 @@
 }
 
 .mid-icon{
-   font-size: 75px;
+   font-size: 70px;
    background-color: green;
+   margin: auto;
    border-radius: 50%;
    width: 90px;
    height: 90px;
-   justify-content: center;
-   display:flex;
-   text-align: center;
-   align-content: center;
-   margin: auto;
+   line-height: 90px;
+   color: white;
 }
 html {
     box-sizing: border-box;
