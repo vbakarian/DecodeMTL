@@ -1,0 +1,53 @@
+ul.block-grid-small{
+    display: flex; /* display elements next to each other */
+    flex-wrap: wrap;
+    list-style: none; /* disable bullets on the LI items */
+    padding-left: 0; /* reset the browser extra padding on UL elements */
+    
+  }
+  
+  ul.block-grid li {
+    padding: 5px; /* Adding a 10px padding on a 100% width would not work if it wasn't for box-sizing: border-box! */
+  }
+  
+  @media only screen and (min-width: 641px) {
+    ul.block-grid-3 > li {
+        width: 33.333%;
+      }
+    }
+
+    @media only screen and (min-width: 1025px) {
+      ul.block-grid-2 > li {
+        width: 25%;
+      }
+    }
+  ul.block-grid-4 > li {
+    width: 25%;
+  }
+  .block-grid-5 > li {
+    width: 20%;
+  }
+
+  .block-grid-6 > li {
+    width: 16.666%;
+  }
+
+  .kittens-gallery {
+    justify-content: center; /* if there are less elements on the last row, center them instead of sending them to the left */
+    text-align: center; /* This will center the caption text below each image */
+  }
+  
+  .kittens-gallery img {
+    padding: 5px;
+    border: 1px solid #999;
+    margin-bottom: 5px;
+  }
+  
+  .kittens-gallery p {
+    font-weight: bold;
+    margin: 0;
+  }
+
+ .responsive-img{
+  
+ }
