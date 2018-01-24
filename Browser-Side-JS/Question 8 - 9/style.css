@@ -1,0 +1,30 @@
+#winner{
+    color: white;
+    margin-top: 45px;
+}
+#container{
+    height: 540px;
+    width: 960px;
+    background:grey;
+    margin-top: 95px;
+    margin-left: 450px;
+}
+
+div{
+    font-size: 25px;
+}
+body{
+    text-align: center;
+    background-image: url("bg.png");
+    background-size: cover;
+}
+
+#restart{
+    margin-top: 45px;
+    width: 200px;
+    height: 50px;
+}
+#app,#gameover{
+    color: white;
+    padding-top: 45px;
+}
