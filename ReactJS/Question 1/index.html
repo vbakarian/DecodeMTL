@@ -1,0 +1,26 @@
+<!-- Create a webpage with 2 nested divs, an image and an a href -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <title>Question 1</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script>
+        var root = document.getElementById('root');
+        var link = React.createElement('a', { href: "https://www.google.ca" }, "google.ca")
+        var br = React.createElement('br', null)
+        var image = React.createElement('img', { src: "image.png" });
+        var elementRoot = React.createElement('div', null, image, br, link);
+        ReactDOM.render(elementRoot, root);
+    </script>
+</body>
+
+</html>

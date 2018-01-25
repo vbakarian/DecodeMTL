@@ -1,0 +1,49 @@
+<!-- 
+    
+    Create a page with two buttons and a div that displays a number
+    One of the buttons increases the number in the div by 1
+    The other number resets the number to 0
+
+    You must create a class that extends React.Component to do this question.
+    You must use setState.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <title>Question 3</title>
+</head>
+
+<body>
+    <div id='root'></div>
+    <script>
+        var root = document.getElementById('root')
+
+
+        class button extends React.Component {
+            constructor() {
+                super();
+                this.state = { counter: 0 };
+                
+            }
+            render() {
+                var div = React.createElement('div', { id: 'plus' }, this.state.counter)
+                var resetButton = React.createElement('button', { id: 'reset', onClick: () => this.setState({counter: 0}) }, 'Reset')
+                var incrementButton = React.createElement('button', {
+                    id: 'increment',
+                    onClick: () => this.setState({ counter: this.state.counter + 1 })
+                }, "Increment me");
+                var main = React.createElement('div',null,incrementButton,div,resetButton)
+                return main;
+            }
+        }
+        ReactDOM.render(React.createElement(button), root)
+    </script>
+</body>
+
+</html>

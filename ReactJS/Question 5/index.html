@@ -1,0 +1,50 @@
+<!-- Create a page with a button and a div. Every time you click on the button, the div gets populated with a new random quote.
+
+You should have at least 5 quotes. It is up to you to find the quote.
+
+
+You must create a class that extends React.Component to do this question.
+You must use setState.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <title>Question 5</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script>
+        var root = document.getElementById('root')
+        class quote extends React.Component {
+            constructor() {
+                super();
+                this.state = { currentID: 0 }
+                this.quotes = ['hello', 'whats up', 'to be or not to be', 'what is the meaning of life', 'what is life']
+            }
+            render() {
+
+                var button = React.createElement('button', { onClick: () => this.setState({ currentID: this.state.currentID = Math.floor(Math.random() * 5) }) }, "Random quote");
+                var div = React.createElement('div', null, this.quotes[this.state.currentID])
+                var main = React.createElement('div', null, button, div);
+                return main;
+            }
+        }
+        ReactDOM.render(React.createElement(quote), root);
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

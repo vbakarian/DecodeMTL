@@ -1,0 +1,29 @@
+<!-- Create a webpage with a button. The text on the button changes every time you press it. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <title>Question 2</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script>
+        var text = "Click Me!"; 
+        var root = document.getElementById('root');
+        function changeText() {
+            var element = React.createElement('button', null, text);
+            text += "!";
+            ReactDOM.render(element, root);
+        }
+        changeText();
+        document.getElementById('root').addEventListener('click', changeText);
+    </script>
+</body>
+
+</html>

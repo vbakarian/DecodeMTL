@@ -1,0 +1,55 @@
+<!-- Create a webpage that displays the current time, including seconds
+
+You must create a class that extends React.Component to do this question.
+You must use setState.
+
+
+Hints:
+Use setInterval
+Every second, update the state with the current time
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <title>Question 6</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script>
+        var root = document.getElementById('root')
+        class currentTime extends React.Component {
+            constructor() {
+                super();
+                this.state = { hours: 0, minutes: 0, seconds: 0 }
+
+                setInterval(() => this.setState({
+                    hours: this.state.hours = new Date().getHours(),
+                    minutes: this.state.minutes = new Date().getMinutes(),
+                    seconds: this.state.seconds = new Date().getSeconds()
+                }), 1000);
+            }
+            render() {
+                // var seconds = new Date().getSeconds();
+                // var minutes = new Date().getMinutes();
+                // var hours = new Date().getHours();
+                var div = React.createElement('div', null, "Current Time");
+                var currentTimeDisplay = this.state.hours + ":" + this.state.minutes +":"+ this.state.seconds;
+                var displayTime = React.createElement('h1', null,div,currentTimeDisplay );
+                return displayTime;
+            }
+
+        }
+        ReactDOM.render(React.createElement(currentTime), root);
+
+    </script>
+</body>
+
+</html>
