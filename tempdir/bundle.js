@@ -65,21 +65,17 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__foo_js__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__foo_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__foo_js__);
-
-console.log("Testing JSx")
 
 
-/***/ }),
-/* 1 */
-/***/ (function(module, exports) {
-
-console.log("1,2,3")
+var foodiv = document.getElementById('foobar');
+ReactDOM.render(React.createElement(
+  'h1',
+  null,
+  ' hello world '
+), foodiv);
 
 /***/ })
 /******/ ]);
