@@ -1,37 +1,50 @@
 const express = require('express')
 const app = express();
 const bodyParser = require('body-parser')
+const fs = require('fs');
 
 app.use(bodyParser.raw({ type: '*/*' }))
 
-let strings = ['hello', 'goodbye', 'whats up']
+//let strings = ['hello', 'goodbye', 'whats up']
 let todoListMap = {};
+
+app.post('/todos', (req, res) => {
+    let username = JSON.parse(req.body.toString());
+    //console.log(todoListMap)
+    res.send(todoListMap[username]);
+})
+
 app.post('/login', (req, res) => {
-    let loginInfo = JSON.parse(req.body.toString())
-    var username = loginInfo.username;
-    var password = loginInfo.password;
+    let loginInfo = JSON.parse(req.body.toString());
+    let usr = loginInfo.username;
+    let pwd = loginInfo.password;
+    console.log('USERNAME in /login: ', usr);
+    console.log('PASSWORD in /login: ', pwd);
     
-    console.log(todoListMap)
-    if (username == "vako" && password == "12345" || username == "nanor" && password == "12345") {
+    if (usr == "vako" && pwd == "12345"
+        || (usr == "helen" && pwd == "12345")) {
+            if(!todoListMap[usr]){
+                todoListMap[usr] = [];
+                console.log('setting empty array: ', todoListMap)
+                fs.writeFileSync('data.txt',JSON.stringify(todoListMap))
+            }
+            console.log("TODOLIST IN LOGIN: ", todoListMap);
         res.send("success")
     } else {
         res.send("fail");
     }
-    
-})
-
-app.get('/todos', (req, res) => {
-    // if (todoListMap[username] === undefined) {
-    //     todoListMap[username] = [];
-    // }
-    // todoListMap[username] = strings;
-    res.send(JSON.stringify(strings));
+    todoListMap = JSON.parse(fs.readFileSync('data.txt').toString());
 })
 
 app.post('/addTodo', (req, res) => {
-    let response = req.body.toString();
-    strings.push(JSON.parse(response))
-    res.send("Your post request: " + strings);
+    let response = JSON.parse(req.body.toString());
+    console.log(response);
+    console.log(todoListMap)
+    let username = response.username;
+    let input = response.inputValue;
+    todoListMap[username] = todoListMap[username].concat(input);
+    fs.writeFileSync('data.txt',JSON.stringify(todoListMap));
+    res.send("Your post request: " + todoListMap[username]);
 })
 
 app.post('/clearTodo', (req, res) => {
